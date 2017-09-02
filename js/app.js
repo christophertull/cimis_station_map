@@ -1,8 +1,13 @@
-var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
+var basemap = new L.TileLayer(baseUrl, {
+				minZoom: 0,
+				maxZoom: 18, 
+				attribution: baseAttribution, 
+				subdomains: subdomains, 
+				opacity: opacity});
 
-var center = new L.LatLng(0, 0);
+var center = new L.LatLng(37.16611, -119.44944);
 
-var map = new L.Map('map', {center: center, zoom: 2, maxZoom: maxZoom, layers: [basemap]});
+var map = new L.Map('map', {center: center, zoom: 22, maxZoom: maxZoom, layers: [basemap]});
 
 var popupOpts = {
     autoPanPadding: new L.Point(5, 50),
